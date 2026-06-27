@@ -10,5 +10,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		get_tree().change_scene_to_file("res://main.tscn")
+	if Input.is_action_just_pressed("help"):
+		get_tree().change_scene_to_file("res://canvases/how_to_play.tscn")	
 	if Input.is_action_just_pressed("esc"):
 		get_tree().quit()

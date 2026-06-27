@@ -1,0 +1,109 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhowtoplay001"]
+
+[ext_resource type="Script" path="res://canvases/how_to_play.gd" id="1_howtp"]
+[ext_resource type="Texture2D" uid="uid://4vjy8hlu0bdu" path="res://resources/pic.jpg" id="2_howtp"]
+
+[node name="HowToPlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_howtp")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(952.5, 530)
+scale = Vector2(3.5049, 3.36126)
+texture = ExtResource("2_howtp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.05, 0.05, 0.05, 1)
+theme_override_font_sizes/font_size = 80
+text = "How to Play"
+horizontal_alignment = 1
+
+[node name="Spacer1" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = " "
+
+[node name="ObjectiveHeader" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.45, 0, 1)
+theme_override_font_sizes/font_size = 38
+text = "OBJECTIVE"
+
+[node name="ObjectiveText" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.05, 0.05, 0.05, 1)
+theme_override_font_sizes/font_size = 28
+text = "Collect all 7 keys and 25 coins hidden across the map before time runs out.
+Once you have everything, the chest will open on its own — and you win!"
+
+[node name="Spacer2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = " "
+
+[node name="ControlsHeader" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.45, 0, 1)
+theme_override_font_sizes/font_size = 38
+text = "CONTROLS"
+
+[node name="ControlsText" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.05, 0.05, 0.05, 1)
+theme_override_font_sizes/font_size = 28
+text = "WASD / Arrow Keys  —  Move
+Mouse  —  Look around
+ESC  —  Quit"
+
+[node name="Spacer3" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = " "
+
+[node name="DangerHeader" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.1, 0.1, 1)
+theme_override_font_sizes/font_size = 38
+text = "BE CAREFUL !"
+
+[node name="DangerText" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.05, 0.05, 0.05, 1)
+theme_override_font_sizes/font_size = 28
+text = "Each key has a red time out zone around it.
+Stay inside one for 5 seconds without collecting the key and it moves to a new spot.
+You have 7 minutes — good luck!"
+
+[node name="Spacer4" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = " "
+
+[node name="BackPrompt" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.05, 0.05, 0.05, 1)
+theme_override_font_sizes/font_size = 42
+text = "Press 'Space' to go back"
+horizontal_alignment = 1

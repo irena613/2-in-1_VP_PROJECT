@@ -83,13 +83,13 @@ theme_override_font_sizes/font_size = 100
 text = "00:00"
 
 [node name="Timer" type="Timer" parent="Timer"]
-wait_time = 300.0
+wait_time = 420.0
 one_shot = true
 
 [node name="CanvasLayer" parent="." instance=ExtResource("7_6wn7y")]
 
 [node name="Doggo" parent="." instance=ExtResource("8_07vyr")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 94.8456, 0, -48.715)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -18.2159, 0, 39.889)
 wall_min_slide_angle = 0.0
 
 [node name="section1" parent="." instance=ExtResource("7_n8qx4")]
