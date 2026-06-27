@@ -13,8 +13,9 @@ func _update_label() -> void:
 
 func _on_collect_zone_body_entered(body: Node3D) -> void:
 	if body.name == "Doggo":
+		$keysound.play()
+		$MeshInstance3D.queue_free()
 		var score = get_tree().get_root().get_node("Node3D/CanvasLayer")
-		queue_free()
 
 func _on_danger_zone_body_entered(body: Node3D) -> void:
 	print("entered danger zone: ", body.name)
