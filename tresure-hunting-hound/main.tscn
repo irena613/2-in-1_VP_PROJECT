@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b0na8uc07apmt"]
+[gd_scene load_steps=29 format=3 uid="uid://b0na8uc07apmt"]
 
 [ext_resource type="Texture2D" uid="uid://srb4ix2otdjc" path="res://resources/coast_sand_rocks_02_diff_4k.jpg" id="1_2k18t"]
 [ext_resource type="Script" path="res://canvases/timer2.gd" id="5_t55sf"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://41nfh3rc4ede" path="res://static scenes/NormalTree.tscn" id="18_6w2iu"]
 [ext_resource type="PackedScene" uid="uid://d3p08oans41f7" path="res://static scenes/flower_section_1.tscn" id="19_auhqu"]
 [ext_resource type="PackedScene" uid="uid://mjk85j4e68t1" path="res://static scenes/GreyTree.tscn" id="20_kk7u2"]
+[ext_resource type="Script" path="res://key_spawner.gd" id="21_1b6a3"]
 [ext_resource type="PackedScene" uid="uid://bhyn2vhivfdrm" path="res://chest5.tscn" id="21_oxfv8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s7w81"]
@@ -102,24 +103,31 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 99.950
 
 [node name="coin" parent="." instance=ExtResource("6_v75eb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.93087, 2, -0.795792)
+visible = false
 
 [node name="coin2" parent="." instance=ExtResource("6_v75eb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 1.7, -20)
+visible = false
 
 [node name="coin3" parent="." instance=ExtResource("6_v75eb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.987, 2.5, 101.883)
+visible = false
 
 [node name="coin4" parent="." instance=ExtResource("6_v75eb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.6258, 3, 64.424)
+visible = false
 
 [node name="coin5" parent="." instance=ExtResource("6_v75eb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.309, 1.5, 84.62)
+visible = false
 
 [node name="coin6" parent="." instance=ExtResource("6_v75eb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.547, 1.3, 63.874)
+visible = false
 
 [node name="coin7" parent="." instance=ExtResource("6_v75eb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.488, 2, -93.268)
+visible = false
 
 [node name="coin8" parent="." instance=ExtResource("6_v75eb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.3839, 3, -45.308)
@@ -376,6 +384,9 @@ transform = Transform3D(-0.0804598, 0, 0.996758, 0, 1, 0, -0.996758, 0, -0.08045
 
 [node name="Node3D2" parent="section6/tree-flower-rock-section2_2" index="5"]
 transform = Transform3D(0.809017, 0, -0.587785, 0, 1, 0, 0.587785, 0, 0.809017, -4.02624, 4.44668, 6.01697)
+
+[node name="KeySpawner" type="Node3D" parent="."]
+script = ExtResource("21_1b6a3")
 
 [connection signal="child_exiting_tree" from="MeshInstance3D" to="Doggo" method="_on_mesh_instance_3d_child_exiting_tree"]
 [connection signal="body_entered" from="coin" to="CanvasLayer" method="_on_coin_body_entered"]
