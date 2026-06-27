@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b0na8uc07apmt"]
+[gd_scene load_steps=31 format=3 uid="uid://b0na8uc07apmt"]
 
 [ext_resource type="Texture2D" uid="uid://srb4ix2otdjc" path="res://resources/coast_sand_rocks_02_diff_4k.jpg" id="1_2k18t"]
 [ext_resource type="Script" path="res://canvases/timer2.gd" id="5_t55sf"]
@@ -22,6 +22,7 @@
 [ext_resource type="Script" path="res://key_spawner.gd" id="21_1b6a3"]
 [ext_resource type="PackedScene" uid="uid://bhyn2vhivfdrm" path="res://chest5.tscn" id="21_oxfv8"]
 [ext_resource type="Script" path="res://coin_spawner.gd" id="22_uqvhl"]
+[ext_resource type="AudioStream" uid="uid://d2vkm52pa4mm8" path="res://prettyjohn1-background-music-505061.ogg" id="23_0ho0n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s7w81"]
 
@@ -391,6 +392,11 @@ script = ExtResource("21_1b6a3")
 
 [node name="CoinSpawner" type="Node3D" parent="."]
 script = ExtResource("22_uqvhl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_0ho0n")
+autoplay = true
+parameters/looping = true
 
 [connection signal="child_exiting_tree" from="MeshInstance3D" to="Doggo" method="_on_mesh_instance_3d_child_exiting_tree"]
 [connection signal="body_entered" from="coin" to="CanvasLayer" method="_on_coin_body_entered"]
