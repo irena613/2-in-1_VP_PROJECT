@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpa46n2q6h47a"]
+
+[ext_resource type="AudioStream" uid="uid://b2cs3p6rj2pj0" path="res://audio/BTS_Whalien_52.mp3" id="1_upvhv"]
+
+[node name="Final song" type="AudioStreamPlayer"]
+stream = ExtResource("1_upvhv")
+volume_db = -17.0
+autoplay = true

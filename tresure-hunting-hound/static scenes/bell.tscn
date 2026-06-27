@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://du5agvquxd7ji"]
+
+[ext_resource type="PackedScene" uid="uid://b65mjhmx3erha" path="res://more trees/Bell_flower.glb" id="1_tktw8"]
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_8ysdc"]
+size = Vector3(1.19521, 1.26724, 1.20808)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Bell_flower" parent="." instance=ExtResource("1_tktw8")]
+
+[node name="Asset3DLoader_sceneRoot" parent="Bell_flower" index="0"]
+visibility_range_begin_margin = 6.0
+visibility_range_end = 10.0
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="Bell_flower"]
+transform = Transform3D(0.0482221, 0, -0.998837, 0, 1, 0, 0.998837, 0, 0.0482221, 0, 0.581287, -0.000197459)
+visible = false
+occluder = SubResource("BoxOccluder3D_8ysdc")
+
+[editable path="Bell_flower"]

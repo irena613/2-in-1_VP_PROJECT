@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://nxlgd0pwfyaq"]
+
+[ext_resource type="PackedScene" uid="uid://dai0714kl7yg6" path="res://static scenes/ground1.tscn" id="1_kwkxj"]
+[ext_resource type="PackedScene" uid="uid://k3qhoml6pur" path="res://static scenes/tree-flower-rock2.tscn" id="2_gxxw2"]
+
+[node name="section1" type="Node3D"]
+
+[node name="forest1_" parent="." instance=ExtResource("1_kwkxj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.5862, 0, -84.8519)
+
+[node name="forest1_2" parent="." instance=ExtResource("1_kwkxj")]
+transform = Transform3D(0.0151383, -0.00482212, 0.999874, -0.00174874, 0.999987, 0.00484913, -0.999884, -0.00182192, 0.0151296, -30.6744, 0, -87.6989)
+
+[node name="tree-flower-rock-section2_2" parent="." instance=ExtResource("2_gxxw2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.9546, 0, -84.2883)
+
+[editable path="forest1_"]
+[editable path="forest1_2"]
+[editable path="tree-flower-rock-section2_2"]

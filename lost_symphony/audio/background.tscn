@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1i6kqkyr6jw4"]
+
+[ext_resource type="AudioStream" uid="uid://e4tyowtlcsrw" path="res://audio/hearty.mp3" id="1_cx3x5"]
+
+[node name="Background" type="AudioStreamPlayer"]
+stream = ExtResource("1_cx3x5")
+volume_db = -13.0
+autoplay = true
+parameters/looping = true

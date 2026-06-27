@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=3 uid="uid://do25qdkai2ges"]
+
+[ext_resource type="ArrayMesh" uid="uid://du5wu4m0ieewy" path="res://tiny park obj/cobble_stones_large.obj" id="1_2pr6q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrtgh"]
+albedo_color = Color(0.28485, 0.28485, 0.28485, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhpuw"]
+albedo_color = Color(0.286275, 0.286275, 0.286275, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmcgb"]
+albedo_color = Color(0.286275, 0.286275, 0.286275, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ven8i"]
+albedo_color = Color(0.286275, 0.286275, 0.286275, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_couxe"]
+albedo_color = Color(0.286275, 0.282353, 0.286275, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iddgr"]
+albedo_color = Color(0.286275, 0.286275, 0.286275, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhetf"]
+albedo_color = Color(0.286275, 0.286275, 0.286275, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_goc8v"]
+albedo_color = Color(0.286275, 0.286275, 0.286275, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CobbleStonesLarge4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -0.013)
+material_override = SubResource("StandardMaterial3D_mrtgh")
+visibility_range_begin_margin = 40.0
+visibility_range_end = 55.0
+mesh = ExtResource("1_2pr6q")
+
+[node name="CobbleStonesLarge7" type="MeshInstance3D" parent="CobbleStonesLarge4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0.013)
+material_override = SubResource("StandardMaterial3D_vhpuw")
+visibility_range_begin_margin = 40.0
+visibility_range_end = 55.0
+mesh = ExtResource("1_2pr6q")
+skeleton = NodePath("../..")
+
+[node name="CobbleStonesLarge6" type="MeshInstance3D" parent="CobbleStonesLarge4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -0.287)
+material_override = SubResource("StandardMaterial3D_vmcgb")
+visibility_range_begin_margin = 40.0
+visibility_range_end = 55.0
+mesh = ExtResource("1_2pr6q")
+skeleton = NodePath("../..")
+
+[node name="CobbleStonesLarge5" type="MeshInstance3D" parent="CobbleStonesLarge4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -0.287)
+material_override = SubResource("StandardMaterial3D_ven8i")
+visibility_range_begin_margin = 40.0
+visibility_range_end = 55.0
+mesh = ExtResource("1_2pr6q")
+skeleton = NodePath("../..")
+
+[node name="CobbleStonesLarge" type="MeshInstance3D" parent="CobbleStonesLarge4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0.042)
+material_override = SubResource("StandardMaterial3D_couxe")
+visibility_range_begin_margin = 40.0
+visibility_range_end = 55.0
+mesh = ExtResource("1_2pr6q")
+
+[node name="CobbleStonesLarge2" type="MeshInstance3D" parent="CobbleStonesLarge4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -0.3)
+material_override = SubResource("StandardMaterial3D_iddgr")
+visibility_range_begin_margin = 40.0
+visibility_range_end = 55.0
+mesh = ExtResource("1_2pr6q")
+
+[node name="CobbleStonesLarge3" type="MeshInstance3D" parent="CobbleStonesLarge4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -0.3)
+material_override = SubResource("StandardMaterial3D_bhetf")
+visibility_range_begin_margin = 40.0
+visibility_range_end = 55.0
+mesh = ExtResource("1_2pr6q")
+
+[node name="CobbleStonesLarge4" type="MeshInstance3D" parent="CobbleStonesLarge4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+material_override = SubResource("StandardMaterial3D_goc8v")
+visibility_range_begin_margin = 40.0
+visibility_range_end = 55.0
+mesh = ExtResource("1_2pr6q")

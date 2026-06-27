@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://87otdlohbdc7"]
+
+[ext_resource type="PackedScene" uid="uid://k3qhoml6pur" path="res://static scenes/tree-flower-rock2.tscn" id="1_5yfhd"]
+[ext_resource type="PackedScene" uid="uid://dai0714kl7yg6" path="res://static scenes/ground1.tscn" id="2_lbrq7"]
+[ext_resource type="PackedScene" uid="uid://bfpxixq02l5o3" path="res://static scenes/grass_patch.glb" id="3_6pear"]
+[ext_resource type="PackedScene" uid="uid://dphw3u4cmujp1" path="res://static scenes/pinkieTree2.tscn" id="4_i4cjy"]
+[ext_resource type="PackedScene" uid="uid://3n1a20kvfgja" path="res://static scenes/tree-rock-flower.tscn" id="5_4wbya"]
+
+[node name="section3" type="Node3D"]
+
+[node name="FlowerSection2_" parent="." instance=ExtResource("1_5yfhd")]
+transform = Transform3D(0.0824951, 0, -0.996591, 0, 1, 0, 0.996591, 0, 0.0824951, 62.3019, 0, 73.6788)
+
+[node name="forest1_3" parent="." instance=ExtResource("2_lbrq7")]
+transform = Transform3D(0.00792371, 0, -0.999969, 0, 1, 0, 0.999969, 0, 0.00792371, 32.0098, 0, 44.4057)
+
+[node name="forest1_4" parent="." instance=ExtResource("2_lbrq7")]
+transform = Transform3D(-0.0394343, 0, -0.999222, 0, 1, 0, 0.999222, 0, -0.0394343, 91.5841, 0, 38.8954)
+
+[node name="forest1_5" parent="." instance=ExtResource("2_lbrq7")]
+transform = Transform3D(0.999207, 0, -0.0398179, 0, 1, 0, 0.0398179, 0, 0.999207, 91.1867, 0, -16.7416)
+
+[node name="grass_patch" parent="." instance=ExtResource("3_6pear")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.02, -0.5, 47.6811)
+
+[node name="tree-flower-rock-section2_" parent="." instance=ExtResource("1_5yfhd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109, 0, 75.9161)
+
+[node name="Node3D2" parent="." instance=ExtResource("4_i4cjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.9838, 0, 69.0011)
+
+[node name="tree-flower-rock-section" parent="." instance=ExtResource("5_4wbya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.942, 0, 106.907)

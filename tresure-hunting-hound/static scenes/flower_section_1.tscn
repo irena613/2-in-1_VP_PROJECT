@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3p08oans41f7"]
+
+[ext_resource type="PackedScene" uid="uid://bo1sjrf1torlp" path="res://more trees/Anthurium.glb" id="1_rwtan"]
+[ext_resource type="PackedScene" uid="uid://b65mjhmx3erha" path="res://more trees/Bell_flower.glb" id="2_2rby6"]
+
+[node name="flower section1" type="Node3D"]
+
+[node name="Anthurium" parent="." instance=ExtResource("1_rwtan")]
+transform = Transform3D(-0.339001, 0, 0.940786, 0, 1, 0, -0.940786, 0, -0.339001, 0.82527, 0, 1.22709)
+
+[node name="Bell_flower" parent="." instance=ExtResource("2_2rby6")]
+
+[node name="Bell_flower2" parent="." instance=ExtResource("2_2rby6")]
+transform = Transform3D(-0.997801, 0, 0.0662739, 0, 1, 0, -0.0662739, 0, -0.997801, 1.22523, 0, -0.399711)
+
+[node name="Anthurium2" parent="." instance=ExtResource("1_rwtan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.369222, 0, -1.69043)

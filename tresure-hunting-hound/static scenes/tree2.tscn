@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3p8g7rrkwsc3"]
+
+[ext_resource type="PackedScene" uid="uid://myejr5jaf06i" path="res://changed_trees/Tree_Green_02.glb" id="1_j6nbj"]
+[ext_resource type="Material" uid="uid://okw3cpn7nsj3" path="res://resources/tree_leaves.tres" id="2_fhfgp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y13he"]
+radius = 0.882515
+height = 10.3045
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_r6xai"]
+size = Vector3(12.5326, 13.8425, 8.04346)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Tree_Green_02" parent="." instance=ExtResource("1_j6nbj")]
+
+[node name="Asset3DLoader_sceneRoot" parent="Tree_Green_02" index="0"]
+visibility_range_begin_margin = 150.0
+visibility_range_end = 170.0
+surface_material_override/1 = ExtResource("2_fhfgp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree_Green_02"]
+transform = Transform3D(1.19545, 0, 0, 0, 1, 0, 0, 0, 1.45369, -0.489429, 5.25598, -0.294545)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tree_Green_02/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.407879, -0.937853, 0.107621)
+shape = SubResource("CapsuleShape3D_y13he")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.43952, 0)
+visible = false
+occluder = SubResource("BoxOccluder3D_r6xai")
+
+[editable path="Tree_Green_02"]

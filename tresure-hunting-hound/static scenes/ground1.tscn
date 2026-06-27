@@ -1,0 +1,302 @@
+[gd_scene load_steps=14 format=3 uid="uid://dai0714kl7yg6"]
+
+[ext_resource type="PackedScene" uid="uid://mjk85j4e68t1" path="res://static scenes/GreyTree.tscn" id="1_4ldlm"]
+[ext_resource type="PackedScene" uid="uid://ci7t0j7wfacd1" path="res://static scenes/jungleTree.tscn" id="2_iliud"]
+[ext_resource type="PackedScene" uid="uid://babyp8dtntm00" path="res://static scenes/pinetree.tscn" id="3_det7q"]
+[ext_resource type="PackedScene" uid="uid://csa3rde6li3tv" path="res://static scenes/rose.tscn" id="4_tow5u"]
+[ext_resource type="PackedScene" uid="uid://1ujib7xb301p" path="res://static scenes/pinkieTree.tscn" id="5_bmlmv"]
+[ext_resource type="PackedScene" uid="uid://bcnq2rtbcnh2d" path="res://static scenes/pinkieTree3.tscn" id="6_626i4"]
+[ext_resource type="PackedScene" uid="uid://dphw3u4cmujp1" path="res://static scenes/pinkieTree2.tscn" id="7_7jekp"]
+[ext_resource type="PackedScene" uid="uid://dtucxdfptxy7v" path="res://static scenes/rock1.tscn" id="8_mhwuc"]
+[ext_resource type="PackedScene" uid="uid://d3p08oans41f7" path="res://static scenes/flower_section_1.tscn" id="9_ufano"]
+[ext_resource type="PackedScene" uid="uid://du5agvquxd7ji" path="res://static scenes/bell.tscn" id="11_onlbs"]
+[ext_resource type="PackedScene" uid="uid://clm500nlmhxwq" path="res://static scenes/rock4.tscn" id="12_h230m"]
+[ext_resource type="ArrayMesh" uid="uid://cr4nnbes81x0p" path="res://OBJ/Trava Kolosok.obj" id="12_s8rar"]
+[ext_resource type="Material" uid="uid://cv8xhplaahmmf" path="res://resources/grass.tres" id="13_hq54a"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="gt" parent="." instance=ExtResource("1_4ldlm")]
+transform = Transform3D(0.994732, -0.0803304, 0.0636755, 0.0832433, 0.995536, -0.0444925, -0.0598171, 0.0495586, 0.996978, 23.214, 0, 26.897)
+
+[node name="gt2" parent="." instance=ExtResource("1_4ldlm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0796, 0, 2.57979)
+
+[node name="gt3" parent="." instance=ExtResource("1_4ldlm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7798, 0, 24.2514)
+
+[node name="gt4" parent="." instance=ExtResource("1_4ldlm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63392, 0, -10.818)
+
+[node name="gt5" parent="." instance=ExtResource("1_4ldlm")]
+transform = Transform3D(0.422751, 0, 0.679177, 0, 0.8, 0, -0.679177, 0, 0.422751, 21.3691, 0, 11.1435)
+
+[node name="jt" parent="." instance=ExtResource("2_iliud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65013, 0, 12.4032)
+
+[node name="jt2" parent="." instance=ExtResource("2_iliud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4629, 0, 14.6428)
+
+[node name="jt3" parent="." instance=ExtResource("2_iliud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2418, 0, -18.6314)
+
+[node name="jt4" parent="." instance=ExtResource("2_iliud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3108, 0, 0.111732)
+
+[node name="jt5" parent="." instance=ExtResource("2_iliud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8933, 0, -16.6591)
+
+[node name="pt" parent="." instance=ExtResource("3_det7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5894, 0, 20.8277)
+
+[node name="pt2" parent="." instance=ExtResource("3_det7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.80725, 0, 21.3698)
+
+[node name="pt3" parent="." instance=ExtResource("3_det7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.05726, 0, -7.18379)
+
+[node name="pt4" parent="." instance=ExtResource("3_det7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9729, 0, 4.32309)
+
+[node name="pt5" parent="." instance=ExtResource("3_det7q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60818, 0, 0.111732)
+
+[node name="rose" parent="." instance=ExtResource("4_tow5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0288849, -0.110278, 2.1688)
+
+[node name="rose2" parent="." instance=ExtResource("4_tow5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.33132, -0.110278, 0.111732)
+
+[node name="rose3" parent="." instance=ExtResource("4_tow5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.45855, -0.110278, 0.111732)
+
+[node name="rose4" parent="." instance=ExtResource("4_tow5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.79643, -0.110278, 0.111732)
+
+[node name="rose5" parent="." instance=ExtResource("4_tow5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0288849, -0.110278, -3.7513)
+
+[node name="Node3D" parent="." instance=ExtResource("5_bmlmv")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -10.5726, 0, -12.9651)
+
+[node name="Node3D2" parent="." instance=ExtResource("6_626i4")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 12.3111, -0.5, -11.3687)
+
+[node name="Node3D3" parent="." instance=ExtResource("7_7jekp")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -12.4228, 0, 4.57225)
+
+[node name="Node3D4" parent="." instance=ExtResource("8_mhwuc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43666, 0, -8.19379)
+
+[node name="flower section1" parent="." instance=ExtResource("9_ufano")]
+transform = Transform3D(0.401227, 0, 0.298358, 0, 0.5, 0, -0.298358, 0, 0.401227, -5.13491, 0, 16.6022)
+
+[node name="Node3D5" parent="." instance=ExtResource("11_onlbs")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.292075, 0, -1.10779)
+
+[node name="Node3D6" parent="." instance=ExtResource("12_h230m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567506, 0, -6.70815)
+
+[node name="Node3D7" parent="." instance=ExtResource("5_bmlmv")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 28.0215, 0, 9.18504)
+
+[node name="Node3D8" parent="." instance=ExtResource("6_626i4")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.80691, 0, 17.3021)
+
+[node name="TravaKolosok" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -2.32144, -2.14084, -0.120327)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 1.37275, -2.14084, -0.120327)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -4.47994, -2.14084, -2.43659)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -0.153961, -2.14084, 1.17431)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 3.54023, -2.14084, 1.17431)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -2.31246, -2.14084, -1.14195)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -0.153961, -2.14084, -3.54699)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 3.54023, -2.14084, -3.54699)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -2.31246, -2.14084, -5.86325)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 15.5023, -2.14084, -12.2985)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok11" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 19.1965, -2.14084, -12.2985)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok12" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 13.3438, -2.14084, -14.6147)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok13" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 17.6698, -2.14084, -11.0038)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok14" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 21.364, -2.14084, -11.0038)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok15" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 15.5113, -2.14084, -13.3201)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok16" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 17.6698, -2.14084, -15.7251)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok17" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 21.364, -2.14084, -15.7251)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok18" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 15.5113, -2.14084, -18.0414)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok19" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -14.6642, -2.14084, 16.7277)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok20" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -10.97, -2.14084, 16.7277)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok21" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -16.8227, -2.14084, 14.4114)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok22" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -12.4967, -2.14084, 18.0223)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok23" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -8.80248, -2.14084, 18.0223)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok24" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -14.6552, -2.14084, 15.706)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok25" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -12.4967, -2.14084, 13.301)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok26" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -8.80248, -2.14084, 13.301)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")
+
+[node name="TravaKolosok27" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -14.6552, -2.14084, 10.9847)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("12_s8rar")
+surface_material_override/0 = ExtResource("13_hq54a")

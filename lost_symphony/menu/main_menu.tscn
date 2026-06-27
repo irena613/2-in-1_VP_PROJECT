@@ -1,0 +1,147 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbc5exknceec2"]
+
+[ext_resource type="Script" path="res://menu/main_menu.gd" id="1_onjuo"]
+[ext_resource type="Texture2D" uid="uid://cf3u2roen26jg" path="res://Assets/Space Background 2_2.png" id="2_ljlsg"]
+
+[sub_resource type="FontFile" id="FontFile_766jm"]
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/613/0/ascent = 0.0
+cache/0/613/0/descent = 0.0
+cache/0/613/0/underline_position = 0.0
+cache/0/613/0/underline_thickness = 0.0
+cache/0/613/0/scale = 1.0
+cache/0/6/0/ascent = 0.0
+cache/0/6/0/descent = 0.0
+cache/0/6/0/underline_position = 0.0
+cache/0/6/0/underline_thickness = 0.0
+cache/0/6/0/scale = 1.0
+cache/0/31/0/ascent = 0.0
+cache/0/31/0/descent = 0.0
+cache/0/31/0/underline_position = 0.0
+cache/0/31/0/underline_thickness = 0.0
+cache/0/31/0/scale = 1.0
+cache/0/46/0/ascent = 0.0
+cache/0/46/0/descent = 0.0
+cache/0/46/0/underline_position = 0.0
+cache/0/46/0/underline_thickness = 0.0
+cache/0/46/0/scale = 1.0
+cache/0/66/0/ascent = 0.0
+cache/0/66/0/descent = 0.0
+cache/0/66/0/underline_position = 0.0
+cache/0/66/0/underline_thickness = 0.0
+cache/0/66/0/scale = 1.0
+cache/0/91/0/ascent = 0.0
+cache/0/91/0/descent = 0.0
+cache/0/91/0/underline_position = 0.0
+cache/0/91/0/underline_thickness = 0.0
+cache/0/91/0/scale = 1.0
+cache/0/116/0/ascent = 0.0
+cache/0/116/0/descent = 0.0
+cache/0/116/0/underline_position = 0.0
+cache/0/116/0/underline_thickness = 0.0
+cache/0/116/0/scale = 1.0
+cache/0/306/0/ascent = 0.0
+cache/0/306/0/descent = 0.0
+cache/0/306/0/underline_position = 0.0
+cache/0/306/0/underline_thickness = 0.0
+cache/0/306/0/scale = 1.0
+cache/0/391/0/ascent = 0.0
+cache/0/391/0/descent = 0.0
+cache/0/391/0/underline_position = 0.0
+cache/0/391/0/underline_thickness = 0.0
+cache/0/391/0/scale = 1.0
+cache/0/486/0/ascent = 0.0
+cache/0/486/0/descent = 0.0
+cache/0/486/0/underline_position = 0.0
+cache/0/486/0/underline_thickness = 0.0
+cache/0/486/0/scale = 1.0
+cache/0/52/0/ascent = 0.0
+cache/0/52/0/descent = 0.0
+cache/0/52/0/underline_position = 0.0
+cache/0/52/0/underline_thickness = 0.0
+cache/0/52/0/scale = 1.0
+cache/0/62/0/ascent = 0.0
+cache/0/62/0/descent = 0.0
+cache/0/62/0/underline_position = 0.0
+cache/0/62/0/underline_thickness = 0.0
+cache/0/62/0/scale = 1.0
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_onjuo")
+
+[node name="SpaceBackground" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.690196)
+position = Vector2(881, 504)
+scale = Vector2(2.1, 2.381)
+texture = ExtResource("2_ljlsg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 160.0
+offset_top = 228.0
+offset_right = 1784.0
+offset_bottom = 311.0
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0.67451, 0, 0.972549, 1)
+theme_override_fonts/font = SubResource("FontFile_766jm")
+theme_override_font_sizes/font_size = 62
+text = "The Forgo_ten Melody"
+horizontal_alignment = 1
+
+[node name="StartNewButton" type="Button" parent="CanvasLayer"]
+self_modulate = Color(0.31988, 0.667869, 0.504458, 1)
+offset_left = 760.0
+offset_top = 440.0
+offset_right = 1116.0
+offset_bottom = 503.0
+theme_override_font_sizes/font_size = 40
+text = "Start New Game
+"
+icon_alignment = 1
+
+[node name="Continue" type="Button" parent="CanvasLayer"]
+self_modulate = Color(0.191368, 0.454593, 0.742208, 1)
+offset_left = 873.0
+offset_top = 552.0
+offset_right = 1032.0
+offset_bottom = 615.0
+theme_override_font_sizes/font_size = 40
+text = "Contiue"
+icon_alignment = 1
+
+[node name="GameControls" type="Button" parent="CanvasLayer"]
+visible = false
+self_modulate = Color(0.576471, 0, 1, 1)
+offset_left = 800.0
+offset_top = 552.0
+offset_right = 1095.0
+offset_bottom = 615.0
+theme_override_font_sizes/font_size = 40
+text = "Game Controls"
+icon_alignment = 1
+
+[node name="QuitGame" type="Button" parent="CanvasLayer"]
+self_modulate = Color(0.576471, 0, 0.235294, 1)
+offset_left = 848.0
+offset_top = 666.0
+offset_right = 1064.0
+offset_bottom = 729.0
+theme_override_font_sizes/font_size = 40
+text = "Exit
+"
+icon_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/StartNewButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="CanvasLayer/QuitGame" to="." method="_on_quit_game_pressed"]

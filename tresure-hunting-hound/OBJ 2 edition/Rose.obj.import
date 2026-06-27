@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dlovty3b0kobg"
+path="res://.godot/imported/Rose.obj-ca2cccf47e4a32e1b9b38d1c18461227.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Rose.obj-ca2cccf47e4a32e1b9b38d1c18461227.mesh"]
+
+source_file="res://OBJ 2 edition/Rose.obj"
+dest_files=["res://.godot/imported/Rose.obj-ca2cccf47e4a32e1b9b38d1c18461227.mesh", "res://.godot/imported/Rose.obj-ca2cccf47e4a32e1b9b38d1c18461227.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

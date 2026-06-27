@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm2d8do1in03u"]
+
+[ext_resource type="ArrayMesh" uid="uid://cgwnwdp2qhqa0" path="res://tiny park obj/bench.obj" id="1_dt64f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p3v4o"]
+size = Vector3(2.04922, 0.76606, 1.09523)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8m83s"]
+size = Vector3(0.686523, 1.96252, 1.01172)
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_5ghrr"]
+size = Vector3(1.06084, 1.16791, 1.73351)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Bench" type="MeshInstance3D" parent="."]
+visibility_range_begin_margin = 50.0
+visibility_range_end = 70.0
+mesh = ExtResource("1_dt64f")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bench"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bench/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0076704, 0.141392, -0.0150986)
+shape = SubResource("BoxShape3D_p3v4o")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Bench"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bench/StaticBody3D2"]
+transform = Transform3D(0.0430789, -0.998951, 0.0155533, 0, 0.0155677, 0.999879, -0.999072, -0.0430737, 0.000670639, 0.0154715, 0.911905, -0.36404)
+shape = SubResource("BoxShape3D_8m83s")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(-0.0399051, 0, -0.999203, 0, 1, 0, 0.999203, 0, -0.0399051, 0, 0.71929, -0.000197459)
+occluder = SubResource("BoxOccluder3D_5ghrr")

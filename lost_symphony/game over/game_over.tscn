@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://1i3rfywrgewy"]
+
+[ext_resource type="Script" path="res://game over/game_over.gd" id="1_he5e7"]
+[ext_resource type="Texture2D" uid="uid://caokkxq26pl0y" path="res://levels/level_7/bg_level_7.png" id="1_o1q4u"]
+
+[node name="Game Over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_he5e7")
+
+[node name="SpaceBackground(1)" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(1004, 544.5)
+scale = Vector2(2.008, 2.174)
+texture = ExtResource("1_o1q4u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0.796078)
+offset_left = 3.0
+offset_top = 320.0
+offset_right = 2003.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 52
+text = "The notes drift away… 
+but the melody still waits for you"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_top = 128.0
+offset_right = 2000.0
+offset_bottom = 336.0
+theme_override_colors/font_color = Color(0.733333, 0, 0, 1)
+theme_override_font_sizes/font_size = 152
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CanvasLayer"]
+
+[node name="QuitGame" type="Button" parent="CanvasLayer/CanvasLayer"]
+self_modulate = Color(0.576471, 0, 0.235294, 1)
+offset_left = 1153.0
+offset_top = 705.0
+offset_right = 1489.0
+offset_bottom = 768.0
+theme_override_font_sizes/font_size = 40
+text = "Exit
+"
+icon_alignment = 1
+
+[node name="Continue" type="Button" parent="CanvasLayer/CanvasLayer"]
+self_modulate = Color(0.191368, 0.454593, 0.742208, 1)
+offset_left = 482.0
+offset_top = 704.0
+offset_right = 833.0
+offset_bottom = 767.0
+theme_override_font_sizes/font_size = 40
+text = "Contiue"
+icon_alignment = 1
+
+[node name="Return to Main Menu" type="Button" parent="CanvasLayer/CanvasLayer"]
+self_modulate = Color(0.31988, 0.667869, 0.504458, 1)
+offset_left = 752.0
+offset_top = 832.0
+offset_right = 1171.0
+offset_bottom = 895.0
+theme_override_font_sizes/font_size = 40
+text = "Return to Main Menu"
+icon_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/CanvasLayer/QuitGame" to="." method="_on_quit_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/CanvasLayer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="CanvasLayer/CanvasLayer/Return to Main Menu" to="." method="_on_return_to_main_menu_pressed"]

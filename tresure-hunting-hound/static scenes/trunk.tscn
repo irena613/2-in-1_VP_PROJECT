@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhg3d3nnwg8yn"]
+
+[ext_resource type="ArrayMesh" uid="uid://bbim33ex8lcdj" path="res://OBJ 2 edition/Trunk_01.obj" id="1_coo2q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sy57e"]
+size = Vector3(4.65973, 0.960815, 0.948242)
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_ysrmr"]
+size = Vector3(4.19189, 1, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Trunk01" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.739213, 0.000277211, 0.673472, -0.000896104, 0.999999, 0.00057198, -0.673471, -0.00102631, 0.739213, 0, 0.3, 0)
+visibility_range_begin_margin = 30.0
+visibility_range_end = 50.0
+mesh = ExtResource("1_coo2q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Trunk01"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trunk01/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.205834, -0.0195923, 0.0379152)
+shape = SubResource("BoxShape3D_sy57e")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(0.758089, 0, 0.652151, 0, 1, 0, -0.652151, 0, 0.758089, 0.296461, 0, -0.18992)
+visible = false
+occluder = SubResource("BoxOccluder3D_ysrmr")

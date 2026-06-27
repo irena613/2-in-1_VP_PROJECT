@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cdo7jrty37u8d"
+path="res://.godot/imported/grass_A.obj-f54ab9e5b0aadfa7e06c6596f3f62055.mesh"
+
+[deps]
+
+files=["res://.godot/imported/grass_A.obj-f54ab9e5b0aadfa7e06c6596f3f62055.mesh"]
+
+source_file="res://tiny park obj/grass_A.obj"
+dest_files=["res://.godot/imported/grass_A.obj-f54ab9e5b0aadfa7e06c6596f3f62055.mesh", "res://.godot/imported/grass_A.obj-f54ab9e5b0aadfa7e06c6596f3f62055.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

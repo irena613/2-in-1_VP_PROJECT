@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3jeam8gmvdvv"]
+
+[ext_resource type="Script" path="res://coin.gd" id="1_gkvxn"]
+[ext_resource type="ArrayMesh" uid="uid://d1cstwua6v5yh" path="res://OBJ/stylooanimalassetpack/glb/stylized_coin/stylized_coin.obj" id="1_imvxa"]
+[ext_resource type="AudioStream" uid="uid://cwjbr0056gbs7" path="res://resources/collected3.wav" id="3_5otd1"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_65hxy"]
+height = 0.172679
+radius = 0.426387
+
+[node name="coin" type="Area3D"]
+script = ExtResource("1_gkvxn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_imvxa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.999765, 0.0216065, 0.00172551, 0, 0.0796074, -0.996826, -0.0216753, 0.996592, 0.0795887, -0.0206254, 0.793142, -0.0098716)
+shape = SubResource("CylinderShape3D_65hxy")
+
+[node name="coinsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5otd1")
+pitch_scale = 0.5
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="coinsound" to="." method="_on_coinsound_finished"]

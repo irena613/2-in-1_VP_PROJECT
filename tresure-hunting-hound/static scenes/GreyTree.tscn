@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://mjk85j4e68t1"]
+
+[ext_resource type="ArrayMesh" uid="uid://naksi0gc3slc" path="res://OBJ/GreyTree.obj" id="1_aerln"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_khg0m"]
+radius = 0.983423
+height = 10.3045
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_jslo0"]
+size = Vector3(9.06584, 12.7792, 6.6839)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="GreyTree" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.999006, 0, 0.044578, 0, 1, 0, -0.044578, 0, -0.999006, -2.944, 4.2, -5.33)
+visibility_range_begin_margin = 150.0
+visibility_range_end = 170.0
+mesh = ExtResource("1_aerln")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GreyTree"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreyTree/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.299712, -0.937854, 0.109745)
+shape = SubResource("CapsuleShape3D_khg0m")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.46735, 4.47816, -5.57786)
+visible = false
+occluder = SubResource("BoxOccluder3D_jslo0")

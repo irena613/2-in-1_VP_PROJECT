@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://drvtg2cn0x2mk"
+path="res://.godot/imported/hedge_corner.obj-30af67a69a76efd57ce200cecf99ea35.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hedge_corner.obj-30af67a69a76efd57ce200cecf99ea35.mesh"]
+
+source_file="res://tiny park obj/hedge_corner.obj"
+dest_files=["res://.godot/imported/hedge_corner.obj-30af67a69a76efd57ce200cecf99ea35.mesh", "res://.godot/imported/hedge_corner.obj-30af67a69a76efd57ce200cecf99ea35.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

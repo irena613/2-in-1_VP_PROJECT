@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b303dpu8bw238"]
+
+[ext_resource type="PackedScene" uid="uid://bojtbcp46d816" path="res://more trees/Plant.glb" id="1_nt1pr"]
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_7lf3c"]
+size = Vector3(1.68691, 1.04464, 1.20808)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Plant" parent="." instance=ExtResource("1_nt1pr")]
+
+[node name="Asset3DLoader_sceneRoot" parent="Plant" index="0"]
+visibility_range_begin_margin = 20.0
+visibility_range_end = 25.0
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(-0.0399051, 0, -0.999203, 0, 1, 0, 0.999203, 0, -0.0399051, 0, -0.00109307, -0.000197459)
+visible = false
+occluder = SubResource("BoxOccluder3D_7lf3c")
+
+[editable path="Plant"]

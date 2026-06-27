@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://1ujib7xb301p"]
+
+[ext_resource type="ArrayMesh" uid="uid://cfkts53aij7v1" path="res://OBJ 2 edition/WizardTree.obj" id="1_nd1w8"]
+[ext_resource type="Material" uid="uid://bca8cn6ivfil7" path="res://resources/pinkie.tres" id="2_hmb4l"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lbg45"]
+radius = 1.74572
+height = 16.864
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_de41i"]
+size = Vector3(12.1034, 15.0999, 20.9961)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WizardTree2" type="MeshInstance3D" parent="."]
+visibility_range_begin_margin = 150.0
+visibility_range_end = 170.0
+mesh = ExtResource("1_nd1w8")
+surface_material_override/1 = ExtResource("2_hmb4l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WizardTree2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.12431, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WizardTree2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.158101, 2.51991, -0.168523)
+shape = SubResource("CapsuleShape3D_lbg45")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(-0.0399051, 0, -0.999203, 0, 1, 0, 0.999203, 0, -0.0399051, 0, 6.94478, -0.000197459)
+visible = false
+occluder = SubResource("BoxOccluder3D_de41i")

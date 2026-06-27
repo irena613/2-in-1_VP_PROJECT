@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbybhqvj4pnea"]
+
+[ext_resource type="ArrayMesh" uid="uid://8parpnrbwqcx" path="res://tiny park obj/fountain.obj" id="1_ynkfu"]
+[ext_resource type="ArrayMesh" uid="uid://bgui0pr1cf0cd" path="res://tiny park obj/fountain_water.obj" id="2_dmgob"]
+[ext_resource type="ArrayMesh" uid="uid://dcy7380rr6i2f" path="res://tiny park obj/fountain_leaves.obj" id="3_61liv"]
+[ext_resource type="ArrayMesh" uid="uid://lqhwbn1bljkf" path="res://tiny park obj/bird.obj" id="4_qwy47"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1tuov"]
+size = Vector3(3.75519, 1.19458, 1.75775)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o17ll"]
+radius = 0.659297
+height = 1.69737
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_s0pvw"]
+size = Vector3(2.95042, 1.57252, 2.76604)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Fountain" type="MeshInstance3D" parent="."]
+visibility_range_begin_margin = 50.0
+visibility_range_end = 70.0
+mesh = ExtResource("1_ynkfu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fountain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14814, 0, 0.0170953)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fountain/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0827331, 0, 0.0360413)
+shape = SubResource("BoxShape3D_1tuov")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Fountain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29628, 0, 0.0341907)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fountain/StaticBody3D2"]
+transform = Transform3D(0.046008, 0, -0.998941, 0, 1, 0, 0.998941, 0, 0.046008, 0.367632, 0.09729, 0.0360413)
+shape = SubResource("BoxShape3D_1tuov")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Fountain"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fountain/StaticBody3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.866894, 0)
+shape = SubResource("CapsuleShape3D_o17ll")
+
+[node name="FountainWater" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.999662, 0, -0.0260025, 0, 1, 0, 0.0260025, 0, 0.999662, -0.00504434, 0, -0.0232408)
+visibility_range_begin_margin = 10.0
+visibility_range_end = 12.0
+mesh = ExtResource("2_dmgob")
+
+[node name="FountainLeaves" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14814, 0, 0.0170953)
+visibility_range_begin_margin = 10.0
+visibility_range_end = 12.0
+mesh = ExtResource("3_61liv")
+
+[node name="Bird" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.95153, 0, 0.307556, 0.016584, 0.998545, 0.0513084, -0.307108, 0.053922, -0.950146, 1.55538, 0.74161, -0.272054)
+visibility_range_begin_margin = 20.0
+visibility_range_end = 25.0
+mesh = ExtResource("4_qwy47")
+
+[node name="Bird" type="MeshInstance3D" parent="Bird"]
+transform = Transform3D(0.649011, 0.0320736, -0.760103, -0.0647277, 0.997816, -0.0131633, 0.75802, 0.0577428, 0.64967, 1.49242, 0.670924, -0.466827)
+visibility_range_begin_margin = 20.0
+visibility_range_end = 25.0
+mesh = ExtResource("4_qwy47")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(-0.0399051, 0, -0.999203, 0, 1, 0, 0.999203, 0, -0.0399051, 0, 0.681246, -0.000197459)
+visible = false
+occluder = SubResource("BoxOccluder3D_s0pvw")

@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://mu0joxmddf7"]
+
+[ext_resource type="Script" path="res://canvases/main_menu.gd" id="1_abj6o"]
+[ext_resource type="Texture2D" uid="uid://4vjy8hlu0bdu" path="res://resources/pic.jpg" id="2_77h08"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_abj6o")
+
+[node name="Istockphoto-1324391621-612x612" type="Sprite2D" parent="."]
+position = Vector2(952.5, 530)
+scale = Vector2(3.5049, 3.36126)
+texture = ExtResource("2_77h08")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = -70.0
+offset_right = -13.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0214346, 0.0214346, 0.0214346, 1)
+theme_override_font_sizes/font_size = 100
+text = "Treasure Hunting Hound"
+vertical_alignment = 1
+
+[node name="blank space" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0214346, 0.0214346, 0.0214346, 1)
+theme_override_font_sizes/font_size = 20
+text = "
+"
+vertical_alignment = 1
+
+[node name="SubTitle" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+theme_override_font_sizes/font_size = 60
+text = "Press 'Space' to Play"
+horizontal_alignment = 1

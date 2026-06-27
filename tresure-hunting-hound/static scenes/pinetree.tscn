@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://babyp8dtntm00"]
+
+[ext_resource type="ArrayMesh" uid="uid://c4nxysbx4a823" path="res://OBJ/Pine_tree.obj" id="1_1eyby"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_shsuj"]
+radius = 1.61036
+height = 12.1961
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_x1pdc"]
+size = Vector3(4.72413, 11.299, 5.00438)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="PineTree" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.503457, 0, -0.86402, 0, 1, 0, 0.86402, 0, 0.503457, 0.369, 5.5, -0.359)
+visibility_range_begin_margin = 150.0
+visibility_range_end = 170.0
+mesh = ExtResource("1_1eyby")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PineTree"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PineTree/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0404919, -1.26698, -0.00158131)
+shape = SubResource("CapsuleShape3D_shsuj")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.77592, 0)
+visible = false
+occluder = SubResource("BoxOccluder3D_x1pdc")

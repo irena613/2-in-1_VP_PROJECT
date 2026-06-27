@@ -1,0 +1,146 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdplu4pw5hem0"]
+
+[ext_resource type="Texture2D" uid="uid://caokkxq26pl0y" path="res://levels/level_7/bg_level_7.png" id="1_akoig"]
+
+[sub_resource type="FontFile" id="FontFile_ncbpd"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/613/0/ascent = 0.0
+cache/0/613/0/descent = 0.0
+cache/0/613/0/underline_position = 0.0
+cache/0/613/0/underline_thickness = 0.0
+cache/0/613/0/scale = 1.0
+cache/0/6/0/ascent = 0.0
+cache/0/6/0/descent = 0.0
+cache/0/6/0/underline_position = 0.0
+cache/0/6/0/underline_thickness = 0.0
+cache/0/6/0/scale = 1.0
+cache/0/31/0/ascent = 0.0
+cache/0/31/0/descent = 0.0
+cache/0/31/0/underline_position = 0.0
+cache/0/31/0/underline_thickness = 0.0
+cache/0/31/0/scale = 1.0
+cache/0/46/0/ascent = 0.0
+cache/0/46/0/descent = 0.0
+cache/0/46/0/underline_position = 0.0
+cache/0/46/0/underline_thickness = 0.0
+cache/0/46/0/scale = 1.0
+cache/0/66/0/ascent = 0.0
+cache/0/66/0/descent = 0.0
+cache/0/66/0/underline_position = 0.0
+cache/0/66/0/underline_thickness = 0.0
+cache/0/66/0/scale = 1.0
+cache/0/91/0/ascent = 0.0
+cache/0/91/0/descent = 0.0
+cache/0/91/0/underline_position = 0.0
+cache/0/91/0/underline_thickness = 0.0
+cache/0/91/0/scale = 1.0
+cache/0/116/0/ascent = 0.0
+cache/0/116/0/descent = 0.0
+cache/0/116/0/underline_position = 0.0
+cache/0/116/0/underline_thickness = 0.0
+cache/0/116/0/scale = 1.0
+cache/0/306/0/ascent = 0.0
+cache/0/306/0/descent = 0.0
+cache/0/306/0/underline_position = 0.0
+cache/0/306/0/underline_thickness = 0.0
+cache/0/306/0/scale = 1.0
+cache/0/391/0/ascent = 0.0
+cache/0/391/0/descent = 0.0
+cache/0/391/0/underline_position = 0.0
+cache/0/391/0/underline_thickness = 0.0
+cache/0/391/0/scale = 1.0
+cache/0/486/0/ascent = 0.0
+cache/0/486/0/descent = 0.0
+cache/0/486/0/underline_position = 0.0
+cache/0/486/0/underline_thickness = 0.0
+cache/0/486/0/scale = 1.0
+cache/0/52/0/ascent = 0.0
+cache/0/52/0/descent = 0.0
+cache/0/52/0/underline_position = 0.0
+cache/0/52/0/underline_thickness = 0.0
+cache/0/52/0/scale = 1.0
+cache/0/62/0/ascent = 0.0
+cache/0/62/0/descent = 0.0
+cache/0/62/0/underline_position = 0.0
+cache/0/62/0/underline_thickness = 0.0
+cache/0/62/0/scale = 1.0
+
+[node name="Controls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpaceBackground(1)" type="Sprite2D" parent="."]
+position = Vector2(995, 538.5)
+scale = Vector2(1.99, 2.15)
+texture = ExtResource("1_akoig")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Title" type="Label" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 176.0
+offset_top = 152.0
+offset_right = 1800.0
+offset_bottom = 235.0
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0.67451, 0, 0.972549, 1)
+theme_override_fonts/font = SubResource("FontFile_ncbpd")
+theme_override_font_sizes/font_size = 62
+text = "Control Panel"
+horizontal_alignment = 1
+
+[node name="w StartNewButton" type="Button" parent="CanvasLayer"]
+self_modulate = Color(0.31988, 0.667869, 0.504458, 1)
+offset_left = 776.0
+offset_top = 360.0
+offset_right = 1132.0
+offset_bottom = 423.0
+theme_override_font_sizes/font_size = 40
+text = "Jump
+"
+icon_alignment = 1
+
+[node name="Continue" type="Button" parent="CanvasLayer"]
+self_modulate = Color(0.191368, 0.454593, 0.742208, 1)
+offset_left = 889.0
+offset_top = 472.0
+offset_right = 1048.0
+offset_bottom = 535.0
+theme_override_font_sizes/font_size = 40
+text = "Contiue"
+icon_alignment = 1
+
+[node name="GameControls" type="Button" parent="CanvasLayer"]
+self_modulate = Color(0.576471, 0, 1, 1)
+offset_left = 808.0
+offset_top = 584.0
+offset_right = 1103.0
+offset_bottom = 647.0
+theme_override_font_sizes/font_size = 40
+text = "Game Controls"
+icon_alignment = 1
+
+[node name="QuitGame" type="Button" parent="CanvasLayer"]
+self_modulate = Color(0.576471, 0, 0.235294, 1)
+offset_left = 864.0
+offset_top = 712.0
+offset_right = 1080.0
+offset_bottom = 775.0
+theme_override_font_sizes/font_size = 40
+text = "Exit
+"
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true

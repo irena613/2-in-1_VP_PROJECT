@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://d145ev0t806dm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpc3h"]
+size = Vector2(2098, 26)
+
+[node name="Area2D" type="Area2D"]
+self_modulate = Color(1, 0.231373, 0.270588, 1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1039, -3)
+shape = SubResource("RectangleShape2D_fpc3h")
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D2"]
+self_modulate = Color(0.666667, 0.133333, 0.141176, 1)
+offset_left = -1039.0
+offset_top = -18.0
+offset_right = 1041.0
+offset_bottom = 1.0

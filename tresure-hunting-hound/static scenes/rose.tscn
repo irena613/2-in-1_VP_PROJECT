@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://csa3rde6li3tv"]
+
+[ext_resource type="PackedScene" uid="uid://bjeh0it0mkf73" path="res://resources/Rose.glb" id="1_v7b0s"]
+[ext_resource type="Script" path="res://resources/rose.gd" id="2_i0dqt"]
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_agkmw"]
+size = Vector3(0.566031, 0.466154, 1.09675)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Rose" parent="." instance=ExtResource("1_v7b0s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.272736, 0.0220196, 0.148344)
+script = ExtResource("2_i0dqt")
+
+[node name="Asset3DLoader_sceneRoot" parent="Rose" index="0"]
+visibility_range_begin_margin = 20.0
+visibility_range_end = 25.0
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.230212, 0.556528, 0.0989342)
+visible = false
+occluder = SubResource("BoxOccluder3D_agkmw")
+
+[editable path="Rose"]

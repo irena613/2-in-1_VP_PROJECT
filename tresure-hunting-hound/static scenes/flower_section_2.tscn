@@ -1,0 +1,230 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwuetxkyxns0m"]
+
+[ext_resource type="PackedScene" uid="uid://dqrcaat6sx1dv" path="res://more trees/Daisy.glb" id="1_00c6f"]
+[ext_resource type="PackedScene" uid="uid://bojtbcp46d816" path="res://more trees/Plant.glb" id="2_7ac6d"]
+[ext_resource type="ArrayMesh" uid="uid://cr4nnbes81x0p" path="res://OBJ/Trava Kolosok.obj" id="3_0cpjb"]
+[ext_resource type="Material" uid="uid://cv8xhplaahmmf" path="res://resources/grass.tres" id="4_1l7dm"]
+
+[node name="flower section2" type="Node3D"]
+
+[node name="Daisy" parent="." instance=ExtResource("1_00c6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38636, 0, 0)
+
+[node name="Daisy2" parent="." instance=ExtResource("1_00c6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.33225, 0, 0.860938)
+
+[node name="Daisy3" parent="." instance=ExtResource("1_00c6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.992298, 0, 0)
+
+[node name="Plant" parent="." instance=ExtResource("2_7ac6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52586, 0, 1.63753)
+
+[node name="Plant" parent="Plant" instance=ExtResource("2_7ac6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.452924, 0, -13.3273)
+
+[node name="Plant2" parent="Plant" instance=ExtResource("2_7ac6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.54904, 0, 0.150347)
+
+[node name="Plant3" parent="Plant" instance=ExtResource("2_7ac6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.47592, 0, -5.91813)
+
+[node name="Plant4" parent="Plant" instance=ExtResource("2_7ac6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00308, 0, -13.0864)
+
+[node name="Plant5" parent="Plant" instance=ExtResource("2_7ac6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52586, 0, -8.41077)
+
+[node name="Plant6" parent="Plant" instance=ExtResource("2_7ac6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.66386, 0, 1.63753)
+
+[node name="Plant2" parent="." instance=ExtResource("2_7ac6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75209, 0, -3.17472)
+
+[node name="Daisy4" parent="." instance=ExtResource("1_00c6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.35017, 0, -0.935602)
+
+[node name="Daisy6" parent="." instance=ExtResource("1_00c6f")]
+transform = Transform3D(-0.280985, 0, 0.959712, 0, 1, 0, -0.959712, 0, -0.280985, 7.56888, 0, 0.329366)
+
+[node name="Daisy4" parent="Daisy6" instance=ExtResource("1_00c6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.35017, 0, -0.935602)
+
+[node name="Daisy5" parent="Daisy6" instance=ExtResource("1_00c6f")]
+transform = Transform3D(-0.02349, 0, -0.999724, 0, 1, 0, 0.999724, 0, -0.02349, 0.64297, 0, -1.93625)
+
+[node name="Daisy6" parent="Daisy6" instance=ExtResource("1_00c6f")]
+transform = Transform3D(-0.174078, 0, -0.984732, 0, 1, 0, 0.984732, 0, -0.174078, 4.70033, 0, -1.8712)
+
+[node name="Daisy7" parent="Daisy6" instance=ExtResource("1_00c6f")]
+transform = Transform3D(0.809222, 0, 0.587503, 0, 1, 0, -0.587503, 0, 0.809222, 2.74517, 0, -3.21606)
+
+[node name="Daisy7" parent="." instance=ExtResource("1_00c6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.46456, 0, -3.00238)
+
+[node name="Daisy5" parent="." instance=ExtResource("1_00c6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9754, 0, 0)
+
+[node name="Daisy8" parent="." instance=ExtResource("1_00c6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38636, 0, -7.80271)
+
+[node name="Daisy9" parent="." instance=ExtResource("1_00c6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1721, 0, -6.29624)
+
+[node name="Daisy10" parent="." instance=ExtResource("1_00c6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.21631, 0, -5.31498)
+
+[node name="Daisy11" parent="." instance=ExtResource("1_00c6f")]
+transform = Transform3D(0.354193, 0, -0.935172, 0, 1, 0, 0.935172, 0, 0.354193, 6.10644, 0, -7.94264)
+
+[node name="Daisy4" parent="Daisy11" instance=ExtResource("1_00c6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.35017, 0, -0.935602)
+
+[node name="Daisy5" parent="Daisy11" instance=ExtResource("1_00c6f")]
+transform = Transform3D(-0.02349, 0, -0.999724, 0, 1, 0, 0.999724, 0, -0.02349, 0.64297, 0, -1.93625)
+
+[node name="Daisy6" parent="Daisy11" instance=ExtResource("1_00c6f")]
+transform = Transform3D(-0.174078, 0, -0.984732, 0, 1, 0, 0.984732, 0, -0.174078, 4.70033, 0, -1.8712)
+
+[node name="Daisy7" parent="Daisy11" instance=ExtResource("1_00c6f")]
+transform = Transform3D(0.809222, 0, 0.587503, 0, 1, 0, -0.587503, 0, 0.809222, 2.74517, 0, -3.21606)
+
+[node name="Daisy12" parent="." instance=ExtResource("1_00c6f")]
+transform = Transform3D(-0.280985, 0, 0.959712, 0, 1, 0, -0.959712, 0, -0.280985, -1.0375, 0, -6.88564)
+
+[node name="Daisy4" parent="Daisy12" instance=ExtResource("1_00c6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.35017, 0, -0.935602)
+
+[node name="Daisy5" parent="Daisy12" instance=ExtResource("1_00c6f")]
+transform = Transform3D(-0.02349, 0, -0.999724, 0, 1, 0, 0.999724, 0, -0.02349, 0.64297, 0, -1.93625)
+
+[node name="Daisy6" parent="Daisy12" instance=ExtResource("1_00c6f")]
+transform = Transform3D(-0.174078, 0, -0.984732, 0, 1, 0, 0.984732, 0, -0.174078, 4.70033, 0, -1.8712)
+
+[node name="Daisy7" parent="Daisy12" instance=ExtResource("1_00c6f")]
+transform = Transform3D(0.809222, 0, 0.587503, 0, 1, 0, -0.587503, 0, 0.809222, 2.74517, 0, -3.21606)
+
+[node name="TravaKolosok10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 4.1728, -2.14084, 1.1561)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok11" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 7.867, -2.14084, 1.1561)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok12" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 2.0143, -2.14084, -1.1601)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok13" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 6.3403, -2.14084, 2.4508)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok14" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 10.0345, -2.14084, 2.4508)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok15" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 4.1818, -2.14084, 0.134496)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok16" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 6.3403, -2.14084, -2.2705)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok17" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 10.0345, -2.14084, -2.2705)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok18" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 4.1818, -2.14084, -4.58681)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok19" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -3.109, -2.14084, -10.0291)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok20" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 0.585197, -2.14084, -10.0291)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok21" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -5.2675, -2.14084, -12.3454)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok22" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -0.941503, -2.14084, -8.73445)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok23" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 2.75272, -2.14084, -8.73445)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok24" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -3.1, -2.14084, -11.0508)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok25" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -0.941503, -2.14084, -13.4558)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok26" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 2.75272, -2.14084, -13.4558)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")
+
+[node name="TravaKolosok27" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -3.1, -2.14084, -15.7721)
+visibility_range_begin_margin = 40.0
+visibility_range_end = 60.0
+mesh = ExtResource("3_0cpjb")
+surface_material_override/0 = ExtResource("4_1l7dm")

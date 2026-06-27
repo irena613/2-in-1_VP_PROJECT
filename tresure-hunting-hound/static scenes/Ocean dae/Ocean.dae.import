@@ -1,0 +1,52 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cuqd67xbkumem"
+path="res://.godot/imported/Ocean.dae-d284dacd51b3341e2be9fd55e0506fba.scn"
+
+[deps]
+
+source_file="res://static scenes/Ocean dae/Ocean.dae"
+dest_files=["res://.godot/imported/Ocean.dae-d284dacd51b3341e2be9fd55e0506fba.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=0
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:_NODEID_1681063474": {
+"import/skip_import": true
+},
+"PATH:_NODEID_2186141801": {
+"import/skip_import": true
+},
+"PATH:_NODEID_3404088118": {
+"import/skip_import": true
+},
+"PATH:_NODEID_3761282739": {
+"import/skip_import": true
+},
+"PATH:_NODEID_696005181": {
+"import/skip_import": true
+}
+}
+}

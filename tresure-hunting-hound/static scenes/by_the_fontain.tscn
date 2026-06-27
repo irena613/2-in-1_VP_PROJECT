@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlx2im53gtvio"]
+
+[ext_resource type="PackedScene" uid="uid://dbybhqvj4pnea" path="res://static scenes/chikie_fountain.tscn" id="1_pxiqk"]
+[ext_resource type="PackedScene" uid="uid://cm2d8do1in03u" path="res://static scenes/bench.tscn" id="2_i7rl2"]
+[ext_resource type="PackedScene" uid="uid://do25qdkai2ges" path="res://static scenes/path.tscn" id="3_rr7pf"]
+[ext_resource type="PackedScene" uid="uid://dphw3u4cmujp1" path="res://static scenes/pinkieTree2.tscn" id="4_k8wnu"]
+[ext_resource type="PackedScene" uid="uid://bcnq2rtbcnh2d" path="res://static scenes/pinkieTree3.tscn" id="5_odita"]
+[ext_resource type="PackedScene" uid="uid://1ujib7xb301p" path="res://static scenes/pinkieTree.tscn" id="6_m5d7u"]
+[ext_resource type="PackedScene" uid="uid://chso67vxp2ou3" path="res://static scenes/light.tscn" id="7_qka1i"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="fountain" parent="." instance=ExtResource("1_pxiqk")]
+
+[node name="bench" parent="." instance=ExtResource("2_i7rl2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.168488, 0, -4.959)
+
+[node name="bench2" parent="." instance=ExtResource("2_i7rl2")]
+transform = Transform3D(0.337358, 0, -0.941376, 0, 1, 0, 0.941376, 0, 0.337358, 5.0509, 0, -3.12555)
+
+[node name="bench3" parent="." instance=ExtResource("2_i7rl2")]
+transform = Transform3D(0.378729, 0, 0.925507, 0, 1, 0, -0.925507, 0, 0.378729, -5.39055, 0, -2.76556)
+
+[node name="bench4" parent="." instance=ExtResource("2_i7rl2")]
+transform = Transform3D(-0.681168, 0, -0.732127, 0, 1, 0, 0.732127, 0, -0.681168, 4.37182, 0, 3.63607)
+
+[node name="bench5" parent="." instance=ExtResource("2_i7rl2")]
+transform = Transform3D(-0.654622, 0, 0.755956, 0, 1, 0, -0.755956, 0, -0.654622, -4.01071, 0, 3.20528)
+
+[node name="path" parent="." instance=ExtResource("3_rr7pf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.09617, 0, 0)
+
+[node name="path2" parent="." instance=ExtResource("3_rr7pf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0211, 0, 0)
+
+[node name="path3" parent="." instance=ExtResource("3_rr7pf")]
+transform = Transform3D(0.00656241, 0, -0.999978, 0, 1, 0, 0.999978, 0, 0.00656241, -0.0514827, 0, 5.10846)
+
+[node name="path4" parent="." instance=ExtResource("3_rr7pf")]
+transform = Transform3D(-0.553871, 0, -0.832602, 0, 1, 0, 0.832602, 0, -0.553871, 7.83101, 0, -12.7432)
+
+[node name="path5" parent="." instance=ExtResource("3_rr7pf")]
+transform = Transform3D(0.505447, 0, -0.862858, 0, 1, 0, 0.862858, 0, 0.505447, -7.62872, 0, -12.7432)
+
+[node name="tree" parent="." instance=ExtResource("4_k8wnu")]
+transform = Transform3D(-0.486786, 0, 0.114192, 0, 0.5, 0, -0.114192, 0, -0.486786, 6.1797, -9.53674e-07, -4.98941)
+
+[node name="tree2" parent="." instance=ExtResource("5_odita")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.84432, -0.26968, 6.12002)
+
+[node name="tree3" parent="." instance=ExtResource("5_odita")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.23345, -0.343346, -4.93524)
+
+[node name="tree4" parent="." instance=ExtResource("4_k8wnu")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.1006, 0, 2.82509)
+
+[node name="tree5" parent="." instance=ExtResource("6_m5d7u")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.3563, 0, 10.0144)
+
+[node name="tree6" parent="." instance=ExtResource("6_m5d7u")]
+transform = Transform3D(0.375351, 0, 0.138244, 0, 0.4, 0, -0.138244, 0, 0.375351, 10.1332, 0, 2.36882)
+
+[node name="Node3D2" parent="." instance=ExtResource("7_qka1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.08316, 0, 5.01314)
+
+[node name="Node3D" parent="." instance=ExtResource("7_qka1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59505, 0, -6.21339)

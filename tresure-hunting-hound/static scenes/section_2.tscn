@@ -1,0 +1,201 @@
+[gd_scene load_steps=21 format=3 uid="uid://b5m8ivje6cw7g"]
+
+[ext_resource type="PackedScene" uid="uid://dlx2im53gtvio" path="res://static scenes/by_the_fontain.tscn" id="1_0ilrk"]
+[ext_resource type="PackedScene" uid="uid://k3qhoml6pur" path="res://static scenes/tree-flower-rock2.tscn" id="2_wwlte"]
+[ext_resource type="PackedScene" uid="uid://3n1a20kvfgja" path="res://static scenes/tree-rock-flower.tscn" id="3_skmms"]
+[ext_resource type="ArrayMesh" uid="uid://du5wu4m0ieewy" path="res://tiny park obj/cobble_stones_large.obj" id="4_x5imj"]
+[ext_resource type="ArrayMesh" uid="uid://d2yl7i0r76d3n" path="res://tiny park obj/cobble_stones.obj" id="5_11sao"]
+[ext_resource type="PackedScene" uid="uid://cm2d8do1in03u" path="res://static scenes/bench.tscn" id="6_r7dl5"]
+[ext_resource type="PackedScene" uid="uid://41nfh3rc4ede" path="res://static scenes/NormalTree.tscn" id="7_eyrie"]
+[ext_resource type="PackedScene" uid="uid://bcnq2rtbcnh2d" path="res://static scenes/pinkieTree3.tscn" id="8_ehixq"]
+[ext_resource type="PackedScene" uid="uid://dphw3u4cmujp1" path="res://static scenes/pinkieTree2.tscn" id="9_e2txh"]
+[ext_resource type="PackedScene" uid="uid://d3p08oans41f7" path="res://static scenes/flower_section_1.tscn" id="10_q6kns"]
+[ext_resource type="PackedScene" uid="uid://du0v0pb4m4sju" path="res://static scenes/daisy.tscn" id="11_iysph"]
+[ext_resource type="PackedScene" uid="uid://chso67vxp2ou3" path="res://static scenes/light.tscn" id="12_7llve"]
+[ext_resource type="PackedScene" uid="uid://dhg3d3nnwg8yn" path="res://static scenes/trunk.tscn" id="13_afwwt"]
+[ext_resource type="PackedScene" uid="uid://dai0714kl7yg6" path="res://static scenes/ground1.tscn" id="14_6f1ax"]
+[ext_resource type="PackedScene" uid="uid://dy5jc5yjoiocv" path="res://static scenes/lake.tscn" id="16_fy7fn"]
+[ext_resource type="ArrayMesh" uid="uid://1uebir2ull43" path="res://tiny park obj/bush.obj" id="17_b0cii"]
+[ext_resource type="ArrayMesh" uid="uid://dcy7380rr6i2f" path="res://tiny park obj/fountain_leaves.obj" id="18_co7rc"]
+[ext_resource type="ArrayMesh" uid="uid://cdo7jrty37u8d" path="res://tiny park obj/grass_A.obj" id="19_rywm7"]
+[ext_resource type="PackedScene" uid="uid://dwuetxkyxns0m" path="res://static scenes/flower_section_2.tscn" id="27_1v0of"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_56c2k"]
+albedo_color = Color(0.286275, 0.286275, 0.286275, 1)
+
+[node name="section2" type="Node3D"]
+
+[node name="fountain" parent="." instance=ExtResource("1_0ilrk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.692, 0, -4.703)
+
+[node name="tree-flower-rock-section2_3" parent="." instance=ExtResource("2_wwlte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.4174, 0, -24.2565)
+
+[node name="tree-flower-rock-section2" parent="." instance=ExtResource("3_skmms")]
+transform = Transform3D(-0.73723, 0, 0.675642, 0, 1, 0, -0.675642, 0, -0.73723, -33.4556, -1.52588e-05, 26.3806)
+
+[node name="CobbleStonesLarge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1225, 1.90735e-06, 14.4061)
+material_override = SubResource("StandardMaterial3D_56c2k")
+mesh = ExtResource("4_x5imj")
+
+[node name="CobbleStones" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2346, 1.90735e-06, 15.3161)
+material_override = SubResource("StandardMaterial3D_56c2k")
+mesh = ExtResource("5_11sao")
+
+[node name="CobbleStonesLarge2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.61948, 0, 16.9521)
+material_override = SubResource("StandardMaterial3D_56c2k")
+mesh = ExtResource("4_x5imj")
+
+[node name="CobbleStones2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8802, -1.90735e-06, 17.8938)
+material_override = SubResource("StandardMaterial3D_56c2k")
+mesh = ExtResource("5_11sao")
+
+[node name="CobbleStonesLarge3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.48816, 5.72205e-06, 18.4366)
+material_override = SubResource("StandardMaterial3D_56c2k")
+mesh = ExtResource("4_x5imj")
+
+[node name="CobbleStonesLarge4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.366518, 0, -0.930411, 0, 1, 0, 0.930411, 0, 0.366518, -10.9248, 0, 20.1296)
+material_override = SubResource("StandardMaterial3D_56c2k")
+mesh = ExtResource("4_x5imj")
+
+[node name="bench" parent="." instance=ExtResource("6_r7dl5")]
+transform = Transform3D(0.533231, 0, 0.84597, 0, 1, 0, -0.84597, 0, 0.533231, -8.73181, 0, 15.3137)
+
+[node name="bench2" parent="." instance=ExtResource("6_r7dl5")]
+transform = Transform3D(-0.563641, 0, -0.82602, 0, 1, 0, 0.82602, 0, -0.563641, -8.91714, 0, 21.9489)
+
+[node name="Node3D9" parent="." instance=ExtResource("7_eyrie")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3933, 4.39132, 16.3555)
+
+[node name="Node3D10" parent="." instance=ExtResource("8_ehixq")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -9.15511, -0.558428, 25.3027)
+
+[node name="Node3D10" parent="Node3D10" instance=ExtResource("8_ehixq")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -70.2414, -0.558428, -30.3919)
+
+[node name="Node3D" parent="Node3D10" instance=ExtResource("9_e2txh")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -48.187, 0, -42.795)
+
+[node name="flower section1" parent="." instance=ExtResource("10_q6kns")]
+transform = Transform3D(0.906175, 0, 0.422903, 0, 1, 0, -0.422903, 0, 0.906175, -19.5009, 7.62939e-06, 23.6278)
+
+[node name="daisy" parent="." instance=ExtResource("11_iysph")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -7.38466, -0.2, 13.5396)
+
+[node name="daisy2" parent="." instance=ExtResource("11_iysph")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -8.90793, -0.2, 12.971)
+
+[node name="daisy3" parent="." instance=ExtResource("11_iysph")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -8.88207, -0.2, 23.0839)
+
+[node name="daisy4" parent="." instance=ExtResource("11_iysph")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -6.54429, -0.2, 24.1151)
+
+[node name="daisy5" parent="." instance=ExtResource("11_iysph")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -6.49342, -0.2, 26.2395)
+
+[node name="light" parent="." instance=ExtResource("12_7llve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.80752, 3.8147e-06, 20.4347)
+
+[node name="light2" parent="." instance=ExtResource("12_7llve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.82412, 0, 13.9917)
+
+[node name="light3" parent="." instance=ExtResource("12_7llve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4752, 0, 19.9999)
+
+[node name="flower section2" parent="." instance=ExtResource("10_q6kns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.8521, 1.52588e-05, 2.09578)
+
+[node name="trunk" parent="flower section2" instance=ExtResource("13_afwwt")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 31.7146, -1.52588e-05, -25.1054)
+
+[node name="forest1_6" parent="." instance=ExtResource("14_6f1ax")]
+transform = Transform3D(0.634258, 0, -0.773121, 0, 1, 0, 0.773121, 0, 0.634258, -78.3307, 0, 71.1632)
+
+[node name="flower section3" parent="." instance=ExtResource("27_1v0of")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.754, 0, 50.3253)
+visible = false
+
+[node name="Node3D33" parent="." instance=ExtResource("6_r7dl5")]
+transform = Transform3D(0.194046, 0, -0.980992, 0, 1, 0, 0.980992, 0, 0.194046, -90.2025, 0, 48.9375)
+
+[node name="Node3D34" parent="." instance=ExtResource("12_7llve")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.4613, 0, 46.171)
+
+[node name="lake" parent="." instance=ExtResource("16_fy7fn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.599, 0, -0.347)
+
+[node name="_NODEID_2549433387" parent="lake/Ocean" index="0"]
+visible = false
+
+[node name="_NODEID_1188719449" parent="lake/Ocean" index="1"]
+visible = false
+
+[node name="_NODEID_3243336466" parent="lake/Ocean" index="2"]
+visible = false
+
+[node name="_NODEID_3175202262" parent="lake/Ocean" index="3"]
+visible = false
+
+[node name="_NODEID_1479598393" parent="lake/Ocean" index="4"]
+visible = false
+
+[node name="_NODEID_2549433387" parent="lake/Ocean2" index="0"]
+visible = false
+
+[node name="_NODEID_1188719449" parent="lake/Ocean2" index="1"]
+visible = false
+
+[node name="_NODEID_3243336466" parent="lake/Ocean2" index="2"]
+visible = false
+
+[node name="_NODEID_3175202262" parent="lake/Ocean2" index="3"]
+visible = false
+
+[node name="_NODEID_1479598393" parent="lake/Ocean2" index="4"]
+visible = false
+
+[node name="CobbleStonesLarge5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.9833, 0, -8.08697)
+material_override = SubResource("StandardMaterial3D_56c2k")
+mesh = ExtResource("4_x5imj")
+
+[node name="CobbleStonesLarge6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.9833, 0, -6.35738)
+material_override = SubResource("StandardMaterial3D_56c2k")
+mesh = ExtResource("4_x5imj")
+
+[node name="Bush" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.608, -0.0614548, -8.74677)
+mesh = ExtResource("17_b0cii")
+
+[node name="CobbleStonesLarge7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1983, 0, -19.4889)
+material_override = SubResource("StandardMaterial3D_56c2k")
+mesh = ExtResource("4_x5imj")
+
+[node name="FountainLeaves" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -22)
+mesh = ExtResource("18_co7rc")
+
+[node name="FountainLeaves2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -25, 0, -14)
+mesh = ExtResource("18_co7rc")
+
+[node name="GrassA" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, -18)
+mesh = ExtResource("19_rywm7")
+
+[editable path="tree-flower-rock-section2_3"]
+[editable path="tree-flower-rock-section2"]
+[editable path="tree-flower-rock-section2/Node3D10"]
+[editable path="forest1_6"]
+[editable path="lake"]
+[editable path="lake/Ocean"]
+[editable path="lake/Ocean2"]

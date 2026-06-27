@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://c05hqksi7v4r5"]
+
+[ext_resource type="Script" path="res://notes/note_base.gd" id="1_n7y5u"]
+[ext_resource type="Texture2D" uid="uid://o4d16g7tmyo6" path="res://Assets/Collectables/collectable__3_-removebg-preview-modified.png" id="2_21jou"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5t1lj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_21jou")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwj7h"]
+size = Vector2(12.25, 16)
+
+[node name="Note3" type="Area2D"]
+position = Vector2(8, 40)
+scale = Vector2(2, 2)
+collision_layer = 2
+script = ExtResource("1_n7y5u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(0.815686, 0.709804, 0.0313726, 1)
+position = Vector2(0, -32)
+scale = Vector2(0.159091, 0.147727)
+sprite_frames = SubResource("SpriteFrames_5t1lj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.125, -32)
+shape = SubResource("RectangleShape2D_vwj7h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

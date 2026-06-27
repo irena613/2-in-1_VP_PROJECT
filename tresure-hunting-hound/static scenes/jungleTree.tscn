@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci7t0j7wfacd1"]
+
+[ext_resource type="ArrayMesh" uid="uid://cigr5t6uh7ixy" path="res://OBJ/JungleTree.obj" id="1_h15dq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2l8l3"]
+radius = 2.09943
+height = 12.9516
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_cys4w"]
+size = Vector3(14.3871, 14.2681, 12.0262)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="JungleTree" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.591, 7.2, -4.053)
+visibility_range_begin_margin = 150.0
+visibility_range_end = 170.0
+mesh = ExtResource("1_h15dq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="JungleTree"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="JungleTree/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.629448, -2.26564, -0.222072)
+shape = SubResource("CapsuleShape3D_2l8l3")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92282, 5.17385, -8.26866)
+visible = false
+occluder = SubResource("BoxOccluder3D_cys4w")

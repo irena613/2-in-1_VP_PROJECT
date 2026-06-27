@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://du0v0pb4m4sju"]
+
+[ext_resource type="PackedScene" uid="uid://dqrcaat6sx1dv" path="res://more trees/Daisy.glb" id="1_xsfrv"]
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_luha3"]
+size = Vector3(1.19533, 1.07605, 1.20808)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Daisy" parent="." instance=ExtResource("1_xsfrv")]
+
+[node name="Asset3DLoader_sceneRoot" parent="Daisy" index="0"]
+visibility_range_begin_margin = 10.0
+visibility_range_end = 15.0
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(-0.0399051, 0, -0.999203, 0, 1, 0, 0.999203, 0, -0.0399051, 0, 0.454001, -0.000197459)
+visible = false
+occluder = SubResource("BoxOccluder3D_luha3")
+
+[editable path="Daisy"]

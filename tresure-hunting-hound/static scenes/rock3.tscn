@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://caergnxbcaryj"]
+
+[ext_resource type="ArrayMesh" uid="uid://b1v14qorifauv" path="res://OBJ 2 edition/Rock_03.obj" id="1_cjkxw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r052o"]
+size = Vector3(1, 0.82666, 1.58887)
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_8li12"]
+size = Vector3(1.33647, 0.797202, 1.59089)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Rock03" type="MeshInstance3D" parent="."]
+visibility_range_begin_margin = 50.0
+visibility_range_end = 70.0
+mesh = ExtResource("1_cjkxw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00127107, -0.0467417)
+shape = SubResource("BoxShape3D_r052o")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00998554, 0.160451)
+visible = false
+occluder = SubResource("BoxOccluder3D_8li12")

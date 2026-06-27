@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddw5ae14w006s"]
+
+[ext_resource type="Script" path="res://level_icon_1.gd" id="1_wwdwk"]
+
+[sub_resource type="Gradient" id="Gradient_wgt7e"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_c7ba8"]
+gradient = SubResource("Gradient_wgt7e")
+
+[node name="LevelIcon" type="Control"]
+layout_mode = 3
+anchor_right = 0.143
+anchor_bottom = 0.248
+offset_right = 0.263992
+offset_bottom = 0.29599
+pivot_offset = Vector2(50, 50)
+script = ExtResource("1_wwdwk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 101.0
+offset_right = 102.0
+offset_bottom = 124.0
+text = "Level 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 101.0
+offset_bottom = 100.0
+texture = SubResource("GradientTexture1D_c7ba8")
+expand_mode = 1

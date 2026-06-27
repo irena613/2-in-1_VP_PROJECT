@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://chso67vxp2ou3"]
+
+[ext_resource type="ArrayMesh" uid="uid://fbyjwhu3hvll" path="res://tiny park obj/street_lantern.obj" id="1_f4u0v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_re850"]
+size = Vector3(0.557312, 4.3736, 0.456421)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StreetLantern" type="MeshInstance3D" parent="."]
+visibility_range_begin_margin = 50.0
+visibility_range_end = 70.0
+mesh = ExtResource("1_f4u0v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="StreetLantern"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StreetLantern/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0536804, 1.94516, -0.00518799)
+shape = SubResource("BoxShape3D_re850")
