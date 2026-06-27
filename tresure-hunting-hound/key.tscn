@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://jiaah1s7ukml"]
+
+[ext_resource type="Script" path="res://key.gd" id="1_1r6ix"]
+[ext_resource type="ArrayMesh" uid="uid://djh12ag0vkxhh" path="res://key/21929_Key_v1.obj" id="1_xv1ed"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rq644"]
+albedo_color = Color(0.431373, 0.0980392, 0, 1)
+clearcoat_enabled = true
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_il6vi"]
+radius = 14.0922
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ci3hk"]
+size = Vector3(0.167725, 4.30444, 1)
+
+[node name="Key" type="Node3D"]
+script = ExtResource("1_1r6ix")
+
+[node name="21929KeyV1" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.000356479, 0.999931, -0.0117754, 0.0302573, 0.0117807, 0.999473, 0.999542, 9.14233e-10, -0.0302594, 0.0664384, -1.66559, 0.0203333)
+mesh = ExtResource("1_xv1ed")
+surface_material_override/0 = SubResource("StandardMaterial3D_rq644")
+
+[node name="DangerZone" type="Area3D" parent="21929KeyV1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="21929KeyV1/DangerZone"]
+shape = SubResource("SphereShape3D_il6vi")
+
+[node name="CollectZone" type="Area3D" parent="21929KeyV1"]
+transform = Transform3D(-0.000356479, 0.0302573, 0.999542, 0.99993, 0.0117808, 0, -0.0117753, 0.999473, -0.0302594, 0.0300961, -0.0468119, 1.66611)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="21929KeyV1/CollectZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0496826, 0.606079, 0)
+shape = SubResource("BoxShape3D_ci3hk")
+
+[node name="DangerTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="body_entered" from="21929KeyV1/DangerZone" to="." method="_on_danger_zone_body_entered"]
+[connection signal="body_exited" from="21929KeyV1/DangerZone" to="." method="_on_danger_zone_body_exited"]
+[connection signal="body_entered" from="21929KeyV1/CollectZone" to="." method="_on_collect_zone_body_entered"]
+[connection signal="timeout" from="DangerTimer" to="." method="_on_danger_timer_timeout"]
