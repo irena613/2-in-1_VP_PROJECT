@@ -3,6 +3,8 @@ extends Node3D
 const KEY_SCENE = preload("res://key.tscn")
 const KEY_COUNT = 7
 const SPAWN_Y = 2.0
+const SPAWN_Y_MIN = 1.3
+const SPAWN_Y_MAX = 2.0
 const MIN_SPACING = 35.0
 
 const MAP_MIN = Vector2(-105.0, -98.0)
@@ -23,8 +25,9 @@ func _ready() -> void:
 		attempts += 1
 		var x = rng.randf_range(MAP_MIN.x, MAP_MAX.x)
 		var z = rng.randf_range(MAP_MIN.y, MAP_MAX.y)
+		var SPAWN_Y = rng.randf_range(SPAWN_Y_MIN, SPAWN_Y_MAX)
 		var pos = Vector3(x, SPAWN_Y, z)
-		if _in_exclusion(x, z):
+		if _in_exclusion(x, z) or _too_close(pos, placed):
 			continue
 		var key = KEY_SCENE.instantiate()
 		key.position = pos
@@ -36,3 +39,24 @@ func _in_exclusion(x: float, z: float) -> bool:
 		if Vector2(x, z).distance_to(Vector2(e[0], e[1])) < e[2]:
 			return true
 	return false
+
+func _too_close(pos: Vector3, others: Array[Vector3]) -> bool:
+	for p in others:
+		if pos.distance_to(p) < MIN_SPACING:
+			return true
+	return false
+	
+func respawn_key() -> void:
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	var attempts := 0
+	while attempts < 500:
+		attempts += 1
+		var x = rng.randf_range(MAP_MIN.x, MAP_MAX.x)
+		var z = rng.randf_range(MAP_MIN.y, MAP_MAX.y)
+		if _in_exclusion(x, z):
+			continue
+		var key = KEY_SCENE.instantiate()
+		key.position = Vector3(x, SPAWN_Y, z)
+		add_child(key)
+		break

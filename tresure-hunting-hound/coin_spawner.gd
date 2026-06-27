@@ -2,14 +2,13 @@ extends Node3D
 
 const COIN_SCENE = preload("res://coin.tscn")
 const COIN_COUNT = 25
-const SPAWN_Y_MIN = 1.5
-const SPAWN_Y_MAX = 2.0
+const SPAWN_Y    = 2.0
 
 
 const MAP_MIN = Vector2(-105.0, -98.0)
 const MAP_MAX = Vector2( 110.0, 116.0)
 
-# Excluding zone:  biglake
+# Excluding zone:  biglake is at (99.95, -81.4)
 const EXCLUSIONS = [
 	[100.0, -81.4, 35.0],
 ]
@@ -26,7 +25,6 @@ func _ready() -> void:
 		if _in_exclusion(x, z):
 			continue
 		var coin = COIN_SCENE.instantiate()
-		var SPAWN_Y = rng.randf_range(SPAWN_Y_MIN, SPAWN_Y_MAX)
 		coin.position = Vector3(x, SPAWN_Y, z)
 		print(coin.position)
 		add_child(coin)

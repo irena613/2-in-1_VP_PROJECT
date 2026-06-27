@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvh2ytbqr5ul0"]
+
+[ext_resource type="AudioStream" uid="uid://d1cp4bu5poqd4" path="res://prettyjohn1-background-music-505061.ogg" id="1_0meat"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_0meat")
+autoplay = true
+parameters/looping = false

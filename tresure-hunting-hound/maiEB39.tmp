@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://b0na8uc07apmt"]
+[gd_scene load_steps=32 format=3 uid="uid://b0na8uc07apmt"]
 
 [ext_resource type="Texture2D" uid="uid://srb4ix2otdjc" path="res://resources/coast_sand_rocks_02_diff_4k.jpg" id="1_2k18t"]
 [ext_resource type="Script" path="res://canvases/timer2.gd" id="5_t55sf"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://mjk85j4e68t1" path="res://static scenes/GreyTree.tscn" id="20_kk7u2"]
 [ext_resource type="PackedScene" uid="uid://bhyn2vhivfdrm" path="res://chest5.tscn" id="21_oxfv8"]
 [ext_resource type="Script" path="res://coin_spawner.gd" id="21_pl67c"]
+[ext_resource type="Script" path="res://map_generator.gd" id="22_jxbj8"]
 [ext_resource type="PackedScene" uid="uid://dvh2ytbqr5ul0" path="res://background_music.tscn" id="23_on0lc"]
 [ext_resource type="Script" path="res://key_spawner.gd" id="24_2s5uc"]
 
@@ -83,7 +84,7 @@ theme_override_font_sizes/font_size = 100
 text = "00:00"
 
 [node name="Timer" type="Timer" parent="Timer"]
-wait_time = 300.0
+wait_time = 180.0
 one_shot = true
 
 [node name="CanvasLayer" parent="." instance=ExtResource("7_6wn7y")]
@@ -145,12 +146,6 @@ visible = false
 
 [node name="chest" parent="." instance=ExtResource("21_oxfv8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.4892, 1.04842, -63.3202)
-
-[node name="PointLight3D" type="OmniLight3D" parent="chest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.726166, 0.998491, 1.67355)
-light_color = Color(0.81305, 0.757555, 0.12284, 1)
-light_energy = 0.0
-omni_range = 13.0
 
 [node name="section4" parent="." instance=ExtResource("11_3j64d")]
 transform = Transform3D(-0.0300684, 0, 0.799435, 0, 0.8, 0, -0.799435, 0, -0.0300684, 24.219, 0, -19.4441)
@@ -396,11 +391,21 @@ transform = Transform3D(0.809017, 0, -0.587785, 0, 1, 0, 0.587785, 0, 0.809017, 
 [node name="CoinSpawner" type="Node3D" parent="."]
 script = ExtResource("21_pl67c")
 
+[node name="MapGenerator" type="Node3D" parent="."]
+visible = false
+script = ExtResource("22_jxbj8")
+
 [node name="BackgroundMusic" parent="." instance=ExtResource("23_on0lc")]
 parameters/looping = true
 
 [node name="KeySpawner" type="Node3D" parent="."]
 script = ExtResource("24_2s5uc")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.1893, 1.05587, -63.1012)
+light_color = Color(0.81305, 0.757555, 0.12284, 1)
+light_energy = 0.0
+omni_range = 13.0
 
 [connection signal="child_exiting_tree" from="MeshInstance3D" to="Doggo" method="_on_mesh_instance_3d_child_exiting_tree"]
 [connection signal="body_entered" from="coin" to="CanvasLayer" method="_on_coin_body_entered"]

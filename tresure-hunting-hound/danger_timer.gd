@@ -1,4 +1,4 @@
-extends Area3D
+extends Timer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,7 +11,5 @@ func _process(delta: float) -> void:
 	pass
 
 
-
-func _on_body_entered(body: Node3D) -> void:
-	if body.name == "Doggo":  
-		get_tree().change_scene_to_file("res://canvases/game_over3.tscn")
+func _on_timeout() -> void:
+	pass # Replace with function body.

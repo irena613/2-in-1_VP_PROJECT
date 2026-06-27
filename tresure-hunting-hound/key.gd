@@ -13,20 +13,24 @@ func _update_label() -> void:
 
 func _on_collect_zone_body_entered(body: Node3D) -> void:
 	if body.name == "Doggo":
-		$keysound.play()
-		$MeshInstance3D.queue_free()
 		var score = get_tree().get_root().get_node("Node3D/CanvasLayer")
+		score.stop_danger_flash()
+		score._on_key_collected()
+		queue_free()
 
 func _on_danger_zone_body_entered(body: Node3D) -> void:
 	print("entered danger zone: ", body.name)
 	if body.name == "Doggo":
 		$DangerTimer.start()
+		get_tree().get_root().get_node("Node3D/CanvasLayer").start_danger_flash()
 
 func _on_danger_zone_body_exited(body: Node3D) -> void:
 	if body.name == "Doggo":
 		$DangerTimer.stop()
+		get_tree().get_root().get_node("Node3D/CanvasLayer").stop_danger_flash()
 
 func _on_danger_timer_timeout() -> void:
 	var score = get_tree().get_root().get_node("Node3D/CanvasLayer")
+	score.stop_danger_flash()
 	get_tree().get_root().get_node("Node3D/KeySpawner").respawn_key()
 	queue_free()
