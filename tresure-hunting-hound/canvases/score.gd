@@ -4,7 +4,6 @@ var coinsCollected = 0
 var keysCollected = 0
 const keysRequired = 7
 const coinsRequired = 25
-var player_in_chest_area = false
 var danger_active := false
 var danger_elapsed := 0.0
 const DANGER_DURATION = 5.0
@@ -21,10 +20,8 @@ func _all_collected() -> bool:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("esc"):
 		get_tree().quit()
-	if timer.time_left <= 0.0 and keysCollected < keysRequired and coinsCollected < coinsRequired:
+	if timer.time_left <= 0.0 and not _all_collected():
 		get_tree().change_scene_to_file("res://canvases/game_over3.tscn")
-	if _all_collected and player_in_chest_area and Input.is_action_just_pressed("collect"):
-		get_tree().change_scene_to_file("res://canvases/success_3.tscn")
 	if danger_active and $DangerOverlay:
 		danger_elapsed += delta
 		var intensity = danger_elapsed / DANGER_DURATION
@@ -40,14 +37,6 @@ func _on_key_collected() -> void:
 	keysCollected += 1
 	_update_label()
 	_update_chest_glow()
-
-func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body.name == "Doggo":
-		player_in_chest_area = true
-
-func _on_area_3d_body_exited(body: Node3D) -> void:
-	if body.name == "Doggo":
-		player_in_chest_area = false
 
 func _update_label() -> void:
 	$Label.text = "Keys: " + str(keysCollected) + "/" + str(keysRequired) + "   Coins: " + str(coinsCollected) + "/" + str(coinsRequired)

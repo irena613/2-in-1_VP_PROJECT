@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkxv5pejg1aas"]
+[gd_scene load_steps=10 format=3 uid="uid://dkxv5pejg1aas"]
 
 [ext_resource type="Script" path="res://key.gd" id="1_1r6ix"]
 [ext_resource type="ArrayMesh" uid="uid://djh12ag0vkxhh" path="res://key/21929_Key_v1.obj" id="1_xv1ed"]
 [ext_resource type="Script" path="res://danger_zone.gd" id="3_mat6d"]
 [ext_resource type="Script" path="res://collect_zone.gd" id="4_cdxc7"]
 [ext_resource type="Script" path="res://danger_timer.gd" id="5_srqpj"]
+[ext_resource type="AudioStream" uid="uid://b2yo3gh0681ev" path="res://keysound.ogg" id="6_f7mof"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rq644"]
 albedo_color = Color(0.431373, 0.0980392, 0, 1)
@@ -19,22 +20,22 @@ size = Vector3(0.167725, 4.30444, 1)
 [node name="Key" type="Node3D"]
 script = ExtResource("1_1r6ix")
 
-[node name="21929KeyV1" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.000356479, 0.999931, -0.0117754, 0.0302573, 0.0117807, 0.999473, 0.999542, 9.14233e-10, -0.0302594, 0.0664384, -1.66559, 0.0203333)
 mesh = ExtResource("1_xv1ed")
 surface_material_override/0 = SubResource("StandardMaterial3D_rq644")
 
-[node name="DangerZone" type="Area3D" parent="21929KeyV1"]
+[node name="DangerZone" type="Area3D" parent="MeshInstance3D"]
 script = ExtResource("3_mat6d")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="21929KeyV1/DangerZone"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/DangerZone"]
 shape = SubResource("SphereShape3D_il6vi")
 
-[node name="CollectZone" type="Area3D" parent="21929KeyV1"]
+[node name="CollectZone" type="Area3D" parent="MeshInstance3D"]
 transform = Transform3D(-0.000356479, 0.0302573, 0.999542, 0.99993, 0.0117808, 0, -0.0117753, 0.999473, -0.0302594, 0.0300961, -0.0468119, 1.66611)
 script = ExtResource("4_cdxc7")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="21929KeyV1/CollectZone"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/CollectZone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0496826, 0.606079, 0)
 shape = SubResource("BoxShape3D_ci3hk")
 
@@ -43,7 +44,12 @@ wait_time = 5.0
 one_shot = true
 script = ExtResource("5_srqpj")
 
-[connection signal="body_entered" from="21929KeyV1/DangerZone" to="." method="_on_danger_zone_body_entered"]
-[connection signal="body_exited" from="21929KeyV1/DangerZone" to="." method="_on_danger_zone_body_exited"]
-[connection signal="body_entered" from="21929KeyV1/CollectZone" to="." method="_on_collect_zone_body_entered"]
+[node name="keysound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_f7mof")
+volume_db = 7.0
+
+[connection signal="body_entered" from="MeshInstance3D/DangerZone" to="." method="_on_danger_zone_body_entered"]
+[connection signal="body_exited" from="MeshInstance3D/DangerZone" to="." method="_on_danger_zone_body_exited"]
+[connection signal="body_entered" from="MeshInstance3D/CollectZone" to="." method="_on_collect_zone_body_entered"]
 [connection signal="timeout" from="DangerTimer" to="." method="_on_danger_timer_timeout"]
+[connection signal="finished" from="keysound" to="." method="_on_keysound_finished"]

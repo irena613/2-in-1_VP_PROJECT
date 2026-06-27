@@ -8,8 +8,8 @@ const JUMP_VELOCITY = 7
 @export var sens_horizontal = 0.2
 @export var sens_vertical = 0.2
 
-var walking_speed = 7.0
-var running_speed = 13.0
+var walking_speed = 5.0
+var running_speed = 10.0
 
 @onready var animationPlayer = $dog3/AnimationPlayer
 

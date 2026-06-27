@@ -147,7 +147,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.4892, 1.04842, -63.3202)
 
 [node name="PointLight3D" type="OmniLight3D" parent="chest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.726166, 0.998491, 1.67355)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.128654, 0.589685, -0.0466042)
 light_color = Color(0.81305, 0.757555, 0.12284, 1)
 light_energy = 0.0
 omni_range = 13.0

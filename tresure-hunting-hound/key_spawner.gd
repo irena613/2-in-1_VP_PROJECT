@@ -3,8 +3,6 @@ extends Node3D
 const KEY_SCENE = preload("res://key.tscn")
 const KEY_COUNT = 7
 const SPAWN_Y = 2.0
-const SPAWN_Y_MIN = 1.3
-const SPAWN_Y_MAX = 2.0
 const MIN_SPACING = 35.0
 
 const MAP_MIN = Vector2(-105.0, -98.0)
@@ -25,7 +23,6 @@ func _ready() -> void:
 		attempts += 1
 		var x = rng.randf_range(MAP_MIN.x, MAP_MAX.x)
 		var z = rng.randf_range(MAP_MIN.y, MAP_MAX.y)
-		var SPAWN_Y = rng.randf_range(SPAWN_Y_MIN, SPAWN_Y_MAX)
 		var pos = Vector3(x, SPAWN_Y, z)
 		if _in_exclusion(x, z) or _too_close(pos, placed):
 			continue
