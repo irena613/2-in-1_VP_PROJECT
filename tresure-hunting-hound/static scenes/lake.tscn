@@ -132,19 +132,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -15)
 [node name="Ocean" parent="." instance=ExtResource("16_tjaoe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.01, 0.2, -20.5176)
 
-[node name="_NODEID_3299986381" parent="Ocean" index="0"]
+[node name="_NODEID_3047068685" parent="Ocean" index="0"]
 visible = false
 
-[node name="_NODEID_4228842913" parent="Ocean" index="1"]
+[node name="_NODEID_3475340670" parent="Ocean" index="1"]
 visible = false
 
-[node name="_NODEID_3720820353" parent="Ocean" index="2"]
+[node name="_NODEID_1008913263" parent="Ocean" index="2"]
 visible = false
 
-[node name="_NODEID_2365451568" parent="Ocean" index="3"]
+[node name="_NODEID_1064998663" parent="Ocean" index="3"]
 visible = false
 
-[node name="_NODEID_2887723503" parent="Ocean" index="4"]
+[node name="_NODEID_1048388412" parent="Ocean" index="4"]
 visible = false
 
 [node name="polygon mesh" parent="Ocean/root part" index="0"]
@@ -154,19 +154,19 @@ visibility_range_end = 70.0
 [node name="Ocean2" parent="." instance=ExtResource("16_tjaoe")]
 transform = Transform3D(1.26154, 0, 0, 0, 1, 0, 0, 0, 1, -23.217, 0.2, -13.872)
 
-[node name="_NODEID_3299986381" parent="Ocean2" index="0"]
+[node name="_NODEID_3047068685" parent="Ocean2" index="0"]
 visible = false
 
-[node name="_NODEID_4228842913" parent="Ocean2" index="1"]
+[node name="_NODEID_3475340670" parent="Ocean2" index="1"]
 visible = false
 
-[node name="_NODEID_3720820353" parent="Ocean2" index="2"]
+[node name="_NODEID_1008913263" parent="Ocean2" index="2"]
 visible = false
 
-[node name="_NODEID_2365451568" parent="Ocean2" index="3"]
+[node name="_NODEID_1064998663" parent="Ocean2" index="3"]
 visible = false
 
-[node name="_NODEID_2887723503" parent="Ocean2" index="4"]
+[node name="_NODEID_1048388412" parent="Ocean2" index="4"]
 visible = false
 
 [node name="polygon mesh" parent="Ocean2/root part" index="0"]
